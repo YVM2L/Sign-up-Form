@@ -16,3 +16,42 @@
   text-align: center;
   padding: 20px;
 }
+
+.right-panel {
+  flex: 1; 
+  background-color: white; 
+  padding: 40px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@font-face {
+  font-family: 'Norse Bold';
+  src: url('./fonts/Norse-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+.logo {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center; 
+  gap: 0px; 
+  width: 100%; 
+  padding: 0 40px; 
+}
+
+.logo img {
+  width: 130px; /* увеличиваем изображение */
+  height: auto;
+}
+
+
+.logo h1 {
+  font-family: 'Norse Bold', sans-serif;
+  font-size: 130px; 
+  margin: 0;
+  color: white;
+  white-space: nowrap; 
+}
