@@ -1,3 +1,18 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  background-color: #ffffff;
+}
+
+.form-header p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700; /* чуть жирнее */
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #333;
+}
+
 .container {
   display: flex;
   height: 100vh;
@@ -53,7 +68,7 @@
   width: 130px;
   height: auto;
 }
- 
+
 .logo h1 {
   font-family: "Norse Bold", sans-serif;
   font-size: 130px;
@@ -84,5 +99,38 @@ form {
 form h2,
 form .submit-btn,
 form p {
-  grid-column: span 2; 
+  grid-column: span 2;
+}
+.submit-btn {
+  padding: 14px 20px;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #43a047;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-header {
+  margin-bottom: 40px;
+  text-align: left;
+  max-width: 600px;
+}
+
+.form-header p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #333;
+}
+.login-text a {
+  color: #3b6e46; 
+  text-decoration: none;
+  font-weight: 600;
 }
