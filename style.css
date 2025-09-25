@@ -1,83 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: #333;
-  background-color: #ffffff;
-}
-
-.form-header p {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.3rem;
-  font-weight: 700; /* чуть жирнее */
-  line-height: 1.6;
-  margin-bottom: 16px;
-  color: #333;
+  background-color: #fff;
+  height: 100vh;
 }
 
 .container {
   display: flex;
-  height: 100vh;
+  height: 100%;
 }
 
 .left-panel {
-  flex: 1;
-  background-image: url("./images/plants.jpg");
-  background-size: cover;
-  background-position: center;
-  color: white;
+  position: relative;
+  flex: 0 0 30%;
+  background: url("./images/plants.jpg") center/cover no-repeat;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 20px;
 }
-.logo-wrapper {
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  padding: 40px 60px;
-  display: flex;
-  justify-content: center;
-}
-.right-panel {
-  flex: 1;
-  background-color: white;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+.left-panel .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 @font-face {
   font-family: "Norse Bold";
   src: url("./fonts/Norse-Bold.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
 }
+
+.logo-wrapper {
+  position: relative;
+  margin-bottom: 40vh;
+  z-index: 1;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px 60px;
+  display: flex;
+  justify-content: center;
+}
+
 .logo {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 0px;
-  width: 100%;
-  padding: 0 40px;
+  gap: 0.5rem;
 }
 
 .logo img {
   width: 130px;
-  height: auto;
 }
 
 .logo h1 {
   font-family: "Norse Bold", sans-serif;
   font-size: 130px;
+  color: #fff;
   margin: 0;
-  color: white;
   white-space: nowrap;
 }
 
-input {
+.right-panel {
+  flex: 0 0 70%;
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-header {
+  padding: 30px;
+}
+
+.form-header p {
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+form {
+  padding: 30px;
+}
+
+form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+form fieldset legend {
+  grid-column: 1 / -1; 
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #333;
+  font-size: large;
+}
+
+.form-group input {
+  width: 100%;
   padding: 12px 16px;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -85,52 +136,44 @@ input {
   outline: none;
 }
 
-input:focus {
+.form-footer{
+margin-top: 20px;
+}
+
+.form-group input:focus {
   border-color: #3161ff;
 }
-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  max-width: 600px;
-  width: 100%;
-}
 
-form h2,
-form .submit-btn,
-form p {
-  grid-column: span 2;
-}
-.submit-btn {
-  padding: 14px 20px;
+form fieldset .submit-btn {
+  grid-column: 1 / -1;
+  width: auto;
+  justify-self: start;
+  padding: 10px 40px;
   font-size: 1rem;
-  background-color: #4caf50;
-  color: white;
-  border: none;
   border-radius: 6px;
+}
+form fieldset .submit-btn {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
   cursor: pointer;
+  font-size: large;
 }
 
-.submit-btn:hover {
+form fieldset .submit-btn:hover {
   background-color: #43a047;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.form-header {
-  margin-bottom: 40px;
+.login-text {
+  margin-top: 40px;
   text-align: left;
-  max-width: 600px;
+  font-size: large;
+  font-weight: bold;
 }
 
-.form-header p {
-  font-size: 1.3rem;
-  font-weight: 600;
-  line-height: 1.6;
-  margin-bottom: 16px;
-  color: #333;
-}
 .login-text a {
-  color: #3b6e46; 
-  text-decoration: none;
+  color: #3b6e46;
   font-weight: 600;
+  text-decoration: none;
 }
