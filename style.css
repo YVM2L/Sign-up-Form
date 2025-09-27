@@ -6,9 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  color: #333;
-  background-color: #fff;
-  height: 100vh;
+  height: 100%;
 }
 
 .container {
@@ -17,18 +15,10 @@ body {
 }
 
 .left-panel {
-  position: relative;
   flex: 0 0 30%;
   background: url("./images/plants.jpg") center/cover no-repeat;
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-
-.left-panel .overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
 @font-face {
@@ -37,12 +27,10 @@ body {
 }
 
 .logo-wrapper {
-  position: relative;
-  margin-bottom: 40vh;
-  z-index: 1;
+  margin-bottom: 525px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px 60px;
+  padding: 40px 0px;
   display: flex;
   justify-content: center;
 }
@@ -50,7 +38,6 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
 }
 
 .logo img {
@@ -61,119 +48,101 @@ body {
   font-family: "Norse Bold", sans-serif;
   font-size: 130px;
   color: #fff;
-  margin: 0;
-  white-space: nowrap;
 }
 
 .right-panel {
   flex: 0 0 70%;
-  background-color: #fff;
   display: flex;
-  justify-content: flex-start; 
-  align-items: center;
 }
 
 .form-wrapper {
-  width: 100%;
-  max-width: 1000px;
-  background: #fff;
-  border-radius: 8px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
 .form-header {
-  padding: 30px;
+  padding: 280px 250px 0px 30px;
+  background-color: rgb(201, 186, 168);
 }
 
 .form-header p {
-  font-size: 1.7rem;
+  font-size: 30px;
   font-weight: 700;
-  line-height: 1.6;
-  margin-bottom: 16px;
+  margin-bottom: 40px;
+}
+
+.form-body {
+  background-color: rgb(224, 204, 204);
 }
 
 form {
-  padding: 30px;
+  padding: 40px 0px 40px 30px;
 }
 
 form fieldset {
   border: none;
-  margin: 0;
-  padding: 0px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
 form fieldset legend {
-  grid-column: 1 / -1; 
-  font-size: 1.5rem;
+  font-size: 25px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #333;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
+  width: 350px;
 }
 
 .form-group label {
   margin-bottom: 8px;
-  font-size: 0.9rem;
-  color: #333;
   font-size: large;
 }
 
 .form-group input {
-  width: 100%;
   padding: 12px 16px;
-  font-size: 1rem;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  outline: none;
 }
 
 .form-footer{
-margin-top: 20px;
+padding-top: 40px;
+padding-left: 30px;
+background-color: rgba(245, 245, 220, 0.836);
+padding-bottom: 297px;
+}
+
+.submit-btn{
+  border: none;
+  font-size: large;
+  padding: 15px 50px;
+  color: white;
+  background-color: #3b6e46;
+  border-radius: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #43a047;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .form-group input:focus {
   border-color: #3161ff;
 }
 
-form fieldset .submit-btn {
-  grid-column: 1 / -1;
-  width: auto;
-  justify-self: start;
-  padding: 10px 40px;
-  font-size: 1rem;
-  border-radius: 6px;
-}
-form fieldset .submit-btn {
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: large;
-}
-
-form fieldset .submit-btn:hover {
-  background-color: #43a047;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
 .login-text {
   margin-top: 40px;
-  text-align: left;
   font-size: large;
   font-weight: bold;
 }
 
 .login-text a {
   color: #3b6e46;
-  font-weight: 600;
   text-decoration: none;
 }
